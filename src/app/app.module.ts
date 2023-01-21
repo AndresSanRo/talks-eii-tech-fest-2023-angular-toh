@@ -14,6 +14,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
+import { SharedModule } from 'src/shared/shared.module';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { MessagesComponent } from './messages/messages.component';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    SharedModule
   ],
   declarations: [
     AppComponent,
